@@ -101,15 +101,5 @@ public class RouletteWheelTest {
 
         verify(wheelObserver, never() ).stopped(anyInt());
     }
-
-    @Test
-    public void shouldBuildGame() {
-        WheelObserver wheelObserver = mock(WheelObserver.class);
-
-        RouletteWheel rouletteWheel = new RouletteWheel(wheelObserver);
-        //TickProvider tickProvider = new TickProvider(rouletteWheel);
-        rouletteWheel.spin(1000);
-
-        verify(wheelObserver, timeout(3000).times(1)).stopped(anyInt());
-    }
+    
 }
