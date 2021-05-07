@@ -18,11 +18,17 @@ public class RouletteWheel {
         this.wheelObserver = wheelObserver;
     }
 
+    /*
+        Start to spin the wheel
+    */
     void spin(final long spinForMs) {
         this.spinning = true;
         this.spinForMs = spinForMs;
     }
 
+    /*
+        If the time is higher or equal we stop spinning
+    */
     void tick(final long timeMs) {
         currentMs = timeMs;
         if (spinning && currentMs >= spinForMs)

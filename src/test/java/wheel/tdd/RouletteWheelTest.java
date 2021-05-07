@@ -1,6 +1,5 @@
 package wheel.tdd;
 
-import org.junit.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -101,5 +100,5 @@ public class RouletteWheelTest {
 
         verify(wheelObserver, never() ).stopped(anyInt());
     }
-    
+
 }
